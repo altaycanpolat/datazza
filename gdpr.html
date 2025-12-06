@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datazza | Clarification Text</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0F1115',
+                        'obsidian-light': '#1A1D24',
+                        datazza: {
+                            cyan: '#00E5FF',
+                            blue: '#2979FF',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #2a2e36 1px, transparent 1px), linear-gradient(to bottom, #2a2e36 1px, transparent 1px)",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        .glass-nav {
+            background: rgba(15, 17, 21, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, transparent, 10%, black, 90%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, 5%, black, 95%, transparent);
+        }
+    </style>
+</head>
+
+<body class="bg-obsidian text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-datazza-cyan selection:text-obsidian">
+
+<div class="fixed inset-0 z-0 pointer-events-none">
+    <div class="absolute inset-0 bg-grid-pattern opacity-[0.07] bg-grid"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-datazza-blue opacity-[0.08] blur-[120px] rounded-full pointer-events-none"></div>
+</div>
+
+<nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="logo">
+            <a href="index.html#home" class="block w-32">
+                 <span class="font-display font-bold text-xl text-white">DATAZZA</span>
+            </a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+            <a href="index.html#solutions" class="hover:text-white transition-colors">Solutions</a>
+            <a href="index.html#products" class="hover:text-white transition-colors">Products</a>
+            <a href="index.html#industries" class="hover:text-white transition-colors">Industries</a>
+            <a href="index.html#academy" class="hover:text-white transition-colors">Academy</a>
+            <a href="index.html#references" class="hover:text-white transition-colors">References</a>
+            <a href="careers.html" class="hover:text-white transition-colors">Careers</a>
+        </div>
+
+        <div class="hidden md:block">
+            <a href="index.html#contact" class="group relative px-6 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium transition-all overflow-hidden border border-slate-700 hover:border-datazza-cyan/50 inline-block">
+                <span class="relative z-10">Contact Engineering</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-datazza-cyan/10 to-datazza-blue/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main class="relative z-10 pt-32 lg:pt-40 pb-16">
+    <div class="max-w-4xl mx-auto px-6">
+        <header class="mb-12 border-b border-slate-800 pb-8">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-datazza-blue/10 border border-datazza-blue/20 text-datazza-cyan text-xs font-mono mb-6">
+                KVKK & GDPR
+            </span>
+            <h1 class="font-display font-bold text-4xl lg:text-5xl text-white mb-4 tracking-tight">
+                Clarification Text
+            </h1>
+            <p class="text-sm text-slate-500 font-mono">
+                Last Updated: July 1, 2025
+            </p>
+        </header>
+
+        <div class="prose prose-invert max-w-none prose-headings:font-display prose-headings:text-white prose-headings:font-semibold prose-p:text-slate-300 prose-p:leading-relaxed prose-li:text-slate-300 prose-a:text-datazza-cyan prose-a:no-underline hover:prose-a:underline">
+            
+            <div class="bg-slate-900/50 border border-slate-800 rounded-lg p-6 mb-10 text-xs font-medium text-slate-400 leading-relaxed uppercase tracking-wide">
+                <p class="mb-0">
+                    This Clarification Text has been prepared by Datazza Bilişim A.Ş. as the Data Controller in accordance with Article 10 of the Turkish Personal Data Protection Law No. 6698 ("KVKK") and the Communiqué on the Procedures and Principles of Fulfilling the Obligation to Inform, as well as the General Data Protection Regulation ("GDPR").
+                </p>
+            </div>
+
+            <h2 class="text-2xl mt-12 mb-6 text-white">1. Identity of the Data Controller</h2>
+            <p>
+                Pursuant to KVKK and GDPR, your personal data may be processed by <strong>Datazza Bilişim A.Ş.</strong> ("Company") within the scope described below.
+            </p>
+            <ul class="list-none pl-0 space-y-2 text-sm mt-4 border-l-2 border-slate-800 pl-4">
+                <li><strong>Address:</strong> Nidakule Ataşehir Batı 1/2, Barbaros Mah., Ataşehir, Istanbul, Türkiye</li>
+                <li><strong>Mersis No:</strong> 0271206766800001</li>
+                <li><strong>Email:</strong> <a href="mailto:legal@datazza.com">legal@datazza.com</a></li>
+            </ul>
+
+            <h2 class="text-2xl mt-12 mb-6 text-white">2. Purpose of Processing Personal Data</h2>
+            <p>
+                Your collected personal data will be processed for the following purposes based on the personal data processing conditions specified in Articles 5 and 6 of the KVKK:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 marker:text-datazza-cyan">
+                <li>Carrying out the necessary work by our business units to benefit you from the products and services offered by our Company;</li>
+                <li>Ensuring the legal and commercial security of our Company and those who have a business relationship with our Company;</li>
+                <li>Determining and implementing our Company's commercial and business strategies;</li>
+                <li>Execution of information security processes;</li>
+                <li>Execution of finance and accounting transactions;</li>
+                <li>Follow-up of legal affairs and contract management.</li>
+            </ul>
+
+            <h2 class="text-2xl mt-12 mb-6 text-white">3. To Whom and For What Purpose the Processed Personal Data May Be Transferred</h2>
+            <p>
+                Your processed personal data may be transferred to our business partners, suppliers, shareholders, legally authorized public institutions, and private individuals within the framework of the personal data processing conditions and purposes specified in Articles 8 and 9 of the KVKK and relevant articles of GDPR.
+            </p>
+            <div class="bg-blue-500/5 border border-blue-500/20 rounded-lg p-4 my-4 text-sm">
+                <p class="mb-0">
+                    <strong>Note on Cloud Services:</strong> As a technology company, we utilize global cloud infrastructure (e.g., AWS, Azure, Google Cloud). Therefore, technical data may be processed on secure servers located outside of Türkiye, in compliance with necessary cross-border data transfer regulations.
+                </p>
+            </div>
+
+            <h2 class="text-2xl mt-12 mb-6 text-white">4. Method and Legal Reason for Personal Data Collection</h2>
+            <p>
+                Your personal data is collected electronically via our website, email, and other digital channels ("cookies," "contact forms").
+                This data collection is based on the following legal grounds set forth in Article 5 of the KVKK:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 marker:text-datazza-cyan">
+                <li>It is clearly provided for by the laws;</li>
+                <li>It is necessary to process the personal data of the parties to the contract, provided that it is directly related to the establishment or performance of a contract (e.g., providing our software services);</li>
+                <li>It is mandatory for the data controller to fulfill its legal obligation;</li>
+                <li>It is mandatory for the legitimate interests of the data controller, provided that it does not harm the fundamental rights and freedoms of the data subject.</li>
+            </ul>
+
+            <h2 class="text-2xl mt-12 mb-6 text-white">5. Rights of the Data Subject</h2>
+            <p>
+                As a data subject, you have the following rights under Article 11 of the KVKK and relevant articles of the GDPR:
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 mt-6">
+                <div class="bg-slate-900/40 p-5 rounded-lg border border-slate-800 hover:border-datazza-cyan/30 transition-colors">
+                    <h4 class="text-white font-medium mb-2">Access & Correction</h4>
+                    <p class="text-sm text-slate-400">To learn whether your personal data is processed, to request information if processed, and to request correction of incomplete or inaccurate data.</p>
+                </div>
+                <div class="bg-slate-900/40 p-5 rounded-lg border border-slate-800 hover:border-datazza-cyan/30 transition-colors">
+                    <h4 class="text-white font-medium mb-2">Deletion & Destruction</h4>
+                    <p class="text-sm text-slate-400">To request the deletion or destruction of your personal data within the framework of the conditions stipulated in the law.</p>
+                </div>
+                <div class="bg-slate-900/40 p-5 rounded-lg border border-slate-800 hover:border-datazza-cyan/30 transition-colors">
+                    <h4 class="text-white font-medium mb-2">Objection</h4>
+                    <p class="text-sm text-slate-400">To object to the occurrence of a result against you by analyzing the processed data exclusively through automated systems.</p>
+                </div>
+                <div class="bg-slate-900/40 p-5 rounded-lg border border-slate-800 hover:border-datazza-cyan/30 transition-colors">
+                    <h4 class="text-white font-medium mb-2">Compensation</h4>
+                    <p class="text-sm text-slate-400">To request compensation for damages in case you suffer damage due to unlawful processing of your personal data.</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl mt-12 mb-6 text-white">6. Application to the Data Controller</h2>
+            <p>
+                You may submit your requests regarding your rights listed above to our Company in writing or by using your registered electronic mail (KEP) address, secure electronic signature, mobile signature, or the electronic mail address previously notified to our Company.
+            </p>
+            
+            <div class="flex items-center gap-4 mt-8 p-6 bg-slate-900 border border-slate-800 rounded-xl">
+                <div class="flex-1">
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mb-1">For Legal Inquiries</p>
+                    <p class="text-lg text-white font-display font-medium">legal@datazza.com</p>
+                </div>
+                <div class="flex-1 border-l border-slate-800 pl-4">
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mb-1">Postal Applications</p>
+                    <p class="text-sm text-slate-300">Datazza Bilişim A.Ş.<br>Ataşehir, Istanbul</p>
+                </div>
+            </div>
+            
+            <p class="text-xs text-slate-500 mt-6">
+                Your application will be answered free of charge within thirty (30) days at the latest depending on the nature of the request. However, if the transaction requires an additional cost, a fee may be charged according to the tariff determined by the Personal Data Protection Board.
+            </p>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-[#050608] border-t border-slate-800 pt-10 pb-8 text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-slate-500 text-xs">
+            &copy; 2025 Datazza Bilişim A.Ş. All rights reserved.
+        </div>
+        <div class="text-slate-500 text-xs flex items-center gap-6">
+            <a href="privacy.html" class="hover:text-datazza-cyan transition-colors">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-datazza-cyan transition-colors">Terms of Use</a>
+            <a href="index.html" class="hover:text-datazza-cyan transition-colors">Main Site</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
