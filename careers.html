@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datazza | Careers</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0F1115',
+                        'obsidian-light': '#1A1D24',
+                        datazza: {
+                            cyan: '#00E5FF',
+                            blue: '#2979FF',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #2a2e36 1px, transparent 1px), linear-gradient(to bottom, #2a2e36 1px, transparent 1px)",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        .glass-nav {
+            background: rgba(15, 17, 21, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #00E5FF 0%, #2979FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, transparent, 10%, black, 90%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, 5%, black, 95%, transparent);
+        }
+    </style>
+</head>
+
+<body class="bg-obsidian text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-datazza-cyan selection:text-obsidian">
+
+    <!-- BACKGROUND -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-grid-pattern opacity-[0.07] bg-grid"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-datazza-blue opacity-[0.08] blur-[120px] rounded-full pointer-events-none"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="logo">
+                <a href="index.html#home">
+                    <img src="assets/datazza_logo.png" alt="Datazza Logo">
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <a href="index.html#solutions" class="hover:text-white transition-colors">Solutions</a>
+                <a href="index.html#products" class="hover:text-white transition-colors">Products</a>
+                <a href="index.html#industries" class="hover:text-white transition-colors">Industries</a>
+                <a href="index.html#academy" class="hover:text-white transition-colors">Academy</a>
+                <a href="index.html#references" class="hover:text-white transition-colors">References</a>
+                <a href="index.html#partners" class="hover:text-white transition-colors">Partnership</a>
+                <a href="careers.html" class="text-white">Careers</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="index.html#contact" class="group relative px-6 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium transition-all overflow-hidden border border-slate-700 hover:border-datazza-cyan/50">
+                    <span class="relative z-10">Contact Engineering</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-datazza-cyan/10 to-datazza-blue/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAREERS HEADER -->
+    <main class="relative z-10 pt-32 lg:pt-40 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-datazza-blue/10 border border-datazza-blue/20 text-datazza-cyan text-xs font-mono mb-4">
+                    Careers @ Datazza
+                </span>
+
+                <h1 class="font-display font-bold text-4xl lg:text-6xl text-white mb-4">
+                    The <span class="text-gradient">Datazza</span> difference
+                </h1>
+
+                <p class="text-lg text-slate-400 max-w-3xl">
+                    At Datazza, we’re unapologetically engineering-driven and people-first. 
+                    We bring our heads and hearts to every project – and we want teammates who 
+                    care about clean architectures as much as real-world impact.
+                </p>
+            </div>
+
+            <!-- GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+
+                <!-- People-first culture -->
+                <div class="bg-[#151921] rounded-2xl border border-slate-800 p-8 flex flex-col gap-4">
+                    <div class="h-12 w-12 rounded-full bg-datazza-cyan/10 flex items-center justify-center">
+                        <!-- confetti icon -->
+                        <svg class="w-6 h-6 text-datazza-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                  d="M9 13l-3.5 7.5L13 17 20.5 7.5 9 13zM5 3l2 2M11 3l1 3M17 3l-2 2"/>
+                        </svg>
+                    </div>
+                    <h2 class="font-display text-xl text-white">People-first culture</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Be yourself. Work with low-ego, high-ownership engineers and make a visible impact 
+                        in a small, senior team instead of getting lost in a huge org chart.
+                    </p>
+                </div>
+
+                <!-- Meaningful work -->
+                <div class="bg-[#151921] rounded-2xl border border-slate-800 p-8 flex flex-col gap-4">
+                    <div class="h-12 w-12 rounded-full bg-rose-500/10 flex items-center justify-center">
+                        <svg class="w-7 h-7 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                  d="M12 21s-6-3.3-6-9a4 4 0 017-2.6A4 4 0 0118 12c0 5.7-6 9-6 9z"/>
+                        </svg>
+                    </div>
+                    <h2 class="font-display text-xl text-white">Meaningful work</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Build lakehouses, ML pipelines and real-time systems that actually ship. 
+                        No slideware – just production-grade data platforms for serious clients.
+                    </p>
+                </div>
+
+                <!-- Personal growth -->
+                <div class="bg-[#151921] rounded-2xl border border-slate-800 p-8 flex flex-col gap-4">
+                    <div class="h-12 w-12 rounded-full bg-lime-400/10 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                  d="M12 3v18m0-14l4 4H8l4-4z"/>
+                        </svg>
+                    </div>
+                    <h2 class="font-display text-xl text-white">Personal growth</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Grow through code reviews, design sessions, and direct customer exposure. 
+                        We support conference talks, trainings and deep-dive learning time.
+                    </p>
+                </div>
+
+                <!-- Performance-based pay -->
+                <div class="bg-[#151921] rounded-2xl border border-slate-800 p-8 flex flex-col gap-4">
+                    <div class="h-12 w-12 rounded-full bg-emerald-400/10 flex items-center justify-center">
+                        <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                  d="M3 7h18M5 7v10a2 2 0 002 2h10a2 2 0 002-2V7M9 11h6M9 15h3"/>
+                        </svg>
+                    </div>
+                    <h2 class="font-display text-xl text-white">Performance-based pay</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Competitive, transparent compensation with room to grow as you take ownership
+                        of bigger systems, customers and products.
+                    </p>
+                </div>
+
+                <!-- Health & well-being -->
+                <div class="bg-[#151921] rounded-2xl border border-slate-800 p-8 flex flex-col gap-4">
+                    <div class="h-12 w-12 rounded-full bg-violet-400/10 flex items-center justify-center">
+                        <svg class="w-7 h-7 text-violet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                  d="M12 3a4 4 0 014 4v1h1a3 3 0 013 3v2a7 7 0 01-7 7H9a7 7 0 01-7-7v-2a3 3 0 013-3h1V7a4 4 0 014-4z"/>
+                        </svg>
+                    </div>
+                    <h2 class="font-display text-xl text-white">Health & well-being</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        We care about sustainable pace. No heroic 3 a.m. firefights as a lifestyle – 
+                        just solid engineering practices and realistic delivery plans.
+                    </p>
+                </div>
+
+                <!-- Craft & autonomy -->
+                <div class="bg-[#151921] rounded-2xl border border-slate-800 p-8 flex flex-col gap-4">
+                    <div class="h-12 w-12 rounded-full bg-sky-400/10 flex items-center justify-center">
+                        <svg class="w-7 h-7 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                  d="M4 7l8-4 8 4-8 4-8-4zm0 5l8 4 8-4m-8 4v6"/>
+                        </svg>
+                    </div>
+                    <h2 class="font-display text-xl text-white">Craft & autonomy</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Own your designs end-to-end. Choose the right tools, argue your case, 
+                        and see your ideas land in real customer environments.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Simple "Open roles" block -->
+            <div class="mt-16 max-w-3xl bg-[#101320] border border-slate-800 rounded-2xl p-8">
+                <h2 class="font-display text-2xl text-white mb-3">Open roles & how to apply</h2>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                    We’re always happy to meet senior Data Engineers, Platform Engineers and Data Scientists 
+                    who love clean architectures and hands-on delivery.
+                </p>
+                <p class="text-slate-300 text-sm">
+                    Send your GitHub/portfolio and CV to 
+                    <a href="mailto:hr@datazza.com" class="text-datazza-cyan hover:text-white">hr@datazza.com</a> 
+                    with a short note about the hardest system you’ve designed so far.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (index ile aynı yapıyı kullanabilirsiniz, istersen birebir kopyala) -->
+    <footer class="bg-[#050608] border-t border-slate-800 pt-10 pb-8 mt-10 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-slate-500 text-xs">
+                &copy; 2025 Datazza Bilişim A.Ş. All rights reserved.
+            </div>
+            <div class="text-slate-500 text-xs">
+                <a href="index.html#contact" class="hover:text-datazza-cyan transition-colors">Back to main site</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
