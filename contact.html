@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Engineering | Datazza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Kendi CSS'in -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CDN (index/academy ile aynı yapı) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0F1115',
+                        'obsidian-light': '#151921',
+                        datazza: {
+                            cyan: '#00E5FF',
+                            blue: '#2979FF',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #2a2e36 1px, transparent 1px), linear-gradient(to bottom, #2a2e36 1px, transparent 1px)",
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        .glass-nav {
+            background: rgba(15, 17, 21, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, transparent, 10%, black, 90%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, 5%, black, 95%, transparent);
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-slate-300 font-sans antialiased overflow-x-hidden">
+
+<!-- BACKGROUND -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+    <div class="absolute inset-0 bg-grid-pattern opacity-[0.07] bg-grid"></div>
+    <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-datazza-blue opacity-[0.08] blur-[120px] rounded-full pointer-events-none">
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="logo">
+            <a href="index.html#home">
+                <img src="assets/datazza_logo.png" alt="Datazza Logo">
+            </a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+            <a href="index.html#solutions" class="hover:text-white transition-colors">Solutions</a>
+            <a href="index.html#products" class="hover:text-white transition-colors">Products</a>
+            <a href="index.html#industries" class="hover:text-white transition-colors">Industries</a>
+            <a href="academy.html" class="hover:text-white transition-colors">Academy</a>
+            <a href="index.html#references" class="hover:text-white transition-colors">References</a>
+            <a href="index.html#partners" class="hover:text-white transition-colors">Partnership</a>
+            <span class="text-white">Contact</span>
+        </div>
+    </div>
+</nav>
+
+<main class="relative z-10 pt-28 lg:pt-32 pb-24">
+
+    <!-- CONTACT SECTION (white panel) -->
+    <section class="max-w-6xl mx-auto px-6">
+        <div class="bg-white text-slate-900 rounded-3xl shadow-2xl overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <!-- Sol taraf: metin -->
+                <div class="px-8 md:px-12 py-10 md:py-14">
+                    <p class="text-sm font-mono uppercase tracking-[0.22em] text-slate-500 mb-4">
+                        Contact Engineering
+                    </p>
+                    <h1 class="font-display text-4xl md:text-5xl font-semibold text-slate-900 mb-6 leading-tight">
+                        Let’s talk about<br>
+                        your <span class="italic font-normal">next big project.</span>
+                    </h1>
+
+                    <p class="text-sm text-slate-600 mb-8 max-w-md">
+                        Share a bit about your data platform, analytics or AI challenge.
+                        We’ll respond with a concrete plan, not a generic marketing deck.
+                    </p>
+
+                    <p class="text-sm text-slate-700">
+                        Looking for a new career?
+                        <a href="careers.html"
+                           class="text-datazza-blue font-semibold inline-flex items-center gap-1 hover:underline">
+                            View job openings
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M14 3h7m0 0v7m0-7L10 14"/>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Sağ taraf: form -->
+                <div class="px-8 md:px-10 py-10 md:py-14 bg-slate-50 border-l border-slate-200">
+                    <form id="contact-form" action="/api/contact" method="POST" class="space-y-5">
+                        <!-- Full name -->
+                        <div>
+                            <label for="fullName" class="block text-xs font-semibold text-slate-600 mb-1">
+                                Full name <span class="text-red-500">(required)</span>
+                            </label>
+                            <input id="fullName" name="fullName" type="text" required
+                                   class="w-full rounded-none border-b-2 border-datazza-blue bg-white px-3 py-3 text-sm focus:outline-none focus:bg-slate-50">
+                        </div>
+
+                        <!-- Email + Phone -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="email" class="block text-xs font-semibold text-slate-600 mb-1">
+                                    Email <span class="text-red-500">(required)</span>
+                                </label>
+                                <input id="email" name="email" type="email" required
+                                       class="w-full rounded-none border-b-2 border-datazza-blue bg-white px-3 py-3 text-sm focus:outline-none focus:bg-slate-50">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-slate-600 mb-1">
+                                    Phone <span class="text-red-500">(required)</span>
+                                </label>
+                                <input id="phone" name="phone" type="tel" required
+                                       class="w-full rounded-none border-b-2 border-datazza-blue bg-white px-3 py-3 text-sm focus:outline-none focus:bg-slate-50">
+                            </div>
+                        </div>
+
+                        <!-- Company + Job title -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="company" class="block text-xs font-semibold text-slate-600 mb-1">
+                                    Company <span class="text-red-500">(required)</span>
+                                </label>
+                                <input id="company" name="company" type="text" required
+                                       class="w-full rounded-none border-b-2 border-datazza-blue bg-white px-3 py-3 text-sm focus:outline-none focus:bg-slate-50">
+                            </div>
+                            <div>
+                                <label for="jobTitle" class="block text-xs font-semibold text-slate-600 mb-1">
+                                    Job title <span class="text-red-500">(required)</span>
+                                </label>
+                                <input id="jobTitle" name="jobTitle" type="text" required
+                                       class="w-full rounded-none border-b-2 border-datazza-blue bg-white px-3 py-3 text-sm focus:outline-none focus:bg-slate-50">
+                            </div>
+                        </div>
+
+                        <!-- Country + City -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="country" class="block text-xs font-semibold text-slate-600 mb-1">
+                                    Country
+                                </label>
+                                <input id="country" name="country" type="text"
+                                       class="w-full rounded-none border-b-2 border-datazza-blue bg-white px-3 py-3 text-sm focus:outline-none focus:bg-slate-50">
+                            </div>
+                            <div>
+                                <label for="city" class="block text-xs font-semibold text-slate-600 mb-1">
+                                    City
+                                </label>
+                                <input id="city" name="city" type="text"
+                                       class="w-full rounded-none border-b-2 border-datazza-blue bg-white px-3 py-3 text-sm focus:outline-none focus:bg-slate-50">
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-xs font-semibold text-slate-600 mb-1">
+                                Message
+                            </label>
+                            <textarea id="message" name="message" rows="4"
+                                      class="w-full rounded-none border-b-2 border-datazza-blue bg-white px-3 py-3 text-sm focus:outline-none focus:bg-slate-50"
+                                      placeholder="Add details about your project..."></textarea>
+                        </div>
+
+                        <!-- Status text -->
+                        <p id="contact-status" class="text-xs text-slate-500 h-4"></p>
+
+                        <!-- Submit -->
+                        <button type="submit"
+                                class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition-colors">
+                            Send message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="relative z-10 border-t border-slate-800 bg-obsidian-light mt-16">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-slate-500">
+            © 2025 Datazza Bilişim A.Ş. All rights reserved.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+            <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+            <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="kvkk.html" class="hover:text-white transition-colors">KVKK Clarification Text</a>
+        </div>
+    </div>
+</footer>
+
+<!-- FORM AJAX -->
+<script>
+    const contactForm = document.getElementById('contact-form');
+    const contactStatus = document.getElementById('contact-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            contactStatus.textContent = 'Sending...';
+
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const res = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (res.ok) {
+                    contactStatus.textContent = 'Thank you. We received your message.';
+                    contactForm.reset();
+                } else {
+                    contactStatus.textContent = 'Something went wrong. Please try again.';
+                }
+            } catch (err) {
+                console.error(err);
+                contactStatus.textContent = 'Network error. Please try again.';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
